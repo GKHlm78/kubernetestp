@@ -19,7 +19,7 @@ ls
 exit
 ```
 ### Pod en mode interactif
-![Pod en mode interactif](screenshots\PodModeInteractif.png)
+![PodModeInteractif](screenshots/PodModeInteractif.png)
 
 ## 2. Exposition du déploiement
 
@@ -33,7 +33,7 @@ kubectl get services
 minikube service servicejava-nodeport --url
 ```
 
-![Exposition](screenshots\Exposition.png)
+![Exposition](screenshots/Exposition.png)
 
 # 3. Scaling et load balancing
 
@@ -51,7 +51,7 @@ kubectl scale --replicas=2 deployment/servicejava
 kubectl get deployments
 ```
 ### Deuxieme instance crée
-![deuxieme pods](screenshots\InstancesPod.png)
+![deuxieme pods](screenshots/InstancesPod.png)
 
 # 4. Créer un service de type LoadBalancer
 
@@ -65,7 +65,7 @@ kubectl expose deployment servicejava --type=LoadBalancer --port=8080
 minikube service servicejava --url
 ```
 ###Load balancer running
-![service load balancer running](screenshots\loadbalancerrun.png)
+![service load balancer running](screenshots/loadbalancerrun.png)
 
 # 5. Rolling updates
 
@@ -75,10 +75,10 @@ minikube service servicejava --url
  kubectl set image deployments/my-deployment my-deployment=dockerHudId/my-image:v2
  ```
 ### Mise a jour
- ![set image](screenshots\rollout.png)
+ ![set image](screenshots/rollout.png)
 
  ```bash
 kubectl rollout undo deployments/my-deployment
 ```
 ### Undo
-![Undo](screenshots\RolloutUndo.png)
+![Undo](screenshots/RolloutUndo.png)
