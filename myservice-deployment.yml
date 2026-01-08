@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: servicejava-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: servicejava
+  template:
+    metadata:
+      labels:
+        app: servicejava
+    spec:
+      containers:
+      - name: servicejava
+        image: battlcall/servicejava:latest
+        ports:
+        - containerPort: 8080
